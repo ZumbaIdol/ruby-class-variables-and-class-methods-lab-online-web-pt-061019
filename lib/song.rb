@@ -28,6 +28,12 @@ class Song
   
   def self.genre_count
     genre_count = {}
-    
+    @@genres.collect {|genre| 
+    if genres_count[genre] == genre
+      genres_count[genre] += 1
+    else
+      genres_count[genre] = 1
+    end}
+    genres_count
   end
  end
